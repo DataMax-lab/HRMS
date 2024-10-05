@@ -5,7 +5,7 @@ emp_path  = r'D:\DataMax\Data\emp.csv'
 df_emp  = pd.read_csv(emp_path)
 
 sql = f"""
-select deptno, count(1) dp_count
+select deptno, min(sal) dp_count
 from   df_emp
 group by deptno
 """
